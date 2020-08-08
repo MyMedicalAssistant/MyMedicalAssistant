@@ -5,12 +5,10 @@ from .models import CustomUser
 class CustomUserCreationForm(UserCreationForm):
 	class Meta:
 		model = CustomUser
-		# fields = ('username','email')
-    exclude = []
+		exclude = []
 
 class CustomUserChangeForm(UserChangeForm):
 	class Meta:
 		model = CustomUser
-		# fields = ('username','email')
-    exclude = []
+		exclude = []
 
