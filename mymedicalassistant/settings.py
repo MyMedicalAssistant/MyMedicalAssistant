@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # 'apptSchedule',
     # 'clinicInformation',
     # 'medInformation',
-    # 'medSchedule',
+    'medSchedule',
     'user',
     'rest_framework',
 ]
