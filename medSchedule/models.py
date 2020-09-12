@@ -6,6 +6,7 @@ from clinicInformation.models import DoctorClinic
 
 class MedSchedule(models.Model):
   user = models.ForeignKey(CustomUser, default = 1, verbose_name="username", on_delete = models.SET_DEFAULT)
+  doctor_name = models.ForeignKey(DoctorClinic, default = 1, verbose_name="doctor_name", on_delete=models.SET_DEFAULT)
   medication = models.CharField(max_length=64)
   hours = models.IntegerField()
   dosage = models.CharField(max_length=256)

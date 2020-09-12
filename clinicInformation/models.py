@@ -13,7 +13,7 @@ class DoctorClinic(models.Model):
   clinic_city = models.CharField(max_length=256)
   clinic_state=models.CharField(max_length=200)
   clinic_country = models.CharField(max_length=200)
-  clinic_zipcode = models.IntegerField(max_length=6)
+  clinic_zipcode = models.IntegerField()
   doctor_id = models.CharField(max_length=64)
   def __str__(self):
     return self.doctor_id
