@@ -2,9 +2,10 @@
 # Create your models here.
 from django.db import models
 from user.models import CustomUser
+from clinicInformation.models import DoctorClinic
 
 class MedSchedule(models.Model):
-  user = models.ForeignKey(CustomUser, default = 1, verbose_name="username", on_delete = models.SET_DEFAULT);
+  user = models.ForeignKey(CustomUser, default = 1, verbose_name="username", on_delete = models.SET_DEFAULT)
   medication = models.CharField(max_length=64)
   hours = models.IntegerField()
   dosage = models.CharField(max_length=256)

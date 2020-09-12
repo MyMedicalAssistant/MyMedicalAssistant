@@ -1,19 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
-# Create your models here.
-# class CustomUser(AbstractUser):
-#   first_name = models.CharField(max_length = 64)
-#   last_name = models.CharField(max_length = 64)
-#   email=models.EmailField(('email address'), blank=True, unique=True)
-  
-#   USERNAME_FIELD = 'email'
-#   REQUIRED_FIELDS = ['username']
-
-#   def __str__(self):
-#     return self.username
-
-
 # # Create your models here.
 class MyAccountManager(BaseUserManager):
   def create_user(self, email, username, password = None):
@@ -38,10 +25,10 @@ class CustomUser(AbstractUser):
   email = models.EmailField(verbose_name = 'email', max_length = 60, unique=True)
   username = models.CharField(max_length=30, unique = True)
   date_joined = models.DateTimeField(verbose_name = 'date joined', auto_now_add = True)
-  is_admin = models.BooleanField(default = False)
-  is_active = models.BooleanField(default = True)
-  # is_staff = models.BooleanField(default=False)
-  is_superuser = models.BooleanField(default = False)
+  # is_admin = models.BooleanField(default = False)
+  # is_active = models.BooleanField(default = True)
+  # # is_staff = models.BooleanField(default=False)
+  # is_superuser = models.BooleanField(default = False)
   is_doctor = models.BooleanField(default = False)
   first_name = models.CharField(max_length = 64)
   last_name = models.CharField(max_length = 64)
